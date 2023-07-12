@@ -73,7 +73,7 @@ export function handleTransfer(event: TransferEvent): void {
   entity.blockTimestamp = event.block.timestamp
   entity.transactionHash = event.transaction.hash
 
-  if (!event.params.tokenId)
+  if (event.params.tokenId)
   {
     entity.uri = test1.tokenURI(event.params.tokenId)
   }
